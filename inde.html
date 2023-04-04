@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+.horizontal-nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Remove scrollbar */
+  -ms-overflow-style: none; /* Remove scrollbar for IE and Edge */
+}
+
+.horizontal-nav::-webkit-scrollbar {
+  display: none; /* Remove scrollbar for Chrome, Safari and Opera */
+}
+
+.arrow {
+  height: 40px;
+  width: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.arrow:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 12px;
+  width: 12px;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.arrow.left:before {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.arrow.right:before {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.content {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+		.d1{
+			height: 450px;
+			width: 300px;
+			background-color: blue;
+			margin: 5%;
+		}
+
+		.content{
+			display: flex;
+			flex-direction: row;
+
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<div class="horizontal-nav">
+  <button class="arrow left"></button>
+  <div class="content"><div class="d1"></div>
+    <div class="d1"></div>
+     <div class="d1"></div>
+      <div class="d1"></div></div>
+  <button class="arrow right"></button>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	const container = document.querySelector('.container');
+const scrollContent = document.querySelector('.scroll-content');
+const scrollLeft = document.querySelector('.scroll-left');
+const scrollRight = document.querySelector('.scroll-right');
+
+scrollLeft.addEventListener('click', () => {
+  container.scrollBy({
+    left: -150,
+    behavior: 'smooth'
+  });
+});
+
+scrollRight.addEventListener('click', () => {
+  container.scrollBy({
+    left: 150,
+    behavior: 'smooth'
+  });
+});
+
+
+</script>
+</body>
+</html>
