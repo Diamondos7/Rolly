@@ -16,7 +16,7 @@
 nav {
   background-color: #0f0909;
   margin: 0% auto;
-  height: 60px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
