@@ -12,7 +12,7 @@
 
 	</style>
 </head>
-<body>
+<body class="secc">
 		<section class="sec">
 				<nav>
 					<div class="nav-wrapper">
@@ -36,31 +36,31 @@
 				<div class="textBox">
 					<h2 class="h22" >That's what <br> <span > I like</span> </h2>
 					<p > This NFT is a cartoon image of a woman wearing a black hijab, 
-						standing confidently with a serene expression on her face. The image celebrates women's strength,
+						standing confidently with a serene expression on her face.<span class="hide"> The image celebrates women's strength,
 						 beauty, and poise, and represents the universal values of resilience, dignity, and self-expression
 						  that transcend cultural and religious boundaries. The intricate details of the hijab emphasize its
-						   elegance,power and beauty, and the woman's flowing hair and graceful posture accentuate her dignified presence.
+						   elegance,power and beauty, and the woman's flowing hair and graceful posture accentuate her dignified presence.</span>
 					</p>
-					<a class=".scale-in-center" href="all.html">View All Avatars?</a>
-					
 				</div>
 				<div class="imgBox">
-					<img height="200px" max-width="100%" src="woman.png" class="woman">
+					<img  src="woman.png" class="woman">
 				</div>
 
 			</div>
+
+			<div class="viewall"><a  href="all.html">View All Avatars?</a></div>
 				<ul class="thumb">
 					<li>
-						<img src="glassman.png" onclick="imgSlider('glassman.png'); changeBg('brown')">
+						<img  class="heartbeat" src="glassman.png" onclick="imgSlider('glassman.png'); changeBg('brown')">
 					</li>
 					<li>
-						<img src="man.png"onclick="imgSlider('man.png'); changeBg('rgba(41,50,65,255)')">
+						<img class="heartbeat"  src="man.png"onclick="imgSlider('man.png'); changeBg('rgba(41,50,65,255)')">
 					</li>
 					<li>
-						<img src="hijab.png" onclick="imgSlider('hijab.png'); changeBg('hotpink')">
+						<img class="heartbeat"  src="hijab.png" onclick="imgSlider('hijab.png'); changeBg('hotpink')">
 					</li>
 					<li>
-						<img src="woman.png" onclick="imgSlider('woman.png');changeBg('rgba(41,50,65,255)')">
+						<img class="heartbeat"  src="woman.png" onclick="imgSlider('woman.png');changeBg('rgba(41,50,65,255)')">
 					</li>
 
 				</ul> 
@@ -86,7 +86,7 @@
 		document.querySelector('.woman').src = anything;
 	}
 	function changeBg(color) {
-		const sec = document.querySelector('.sec');
+		const sec = document.querySelector('.secc');
 		sec.style.background = color;
 	}
 </script>
