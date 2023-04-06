@@ -14,19 +14,24 @@
 </head>
 <body>
 		<section class="sec">
-			<header>
-				<a href="index.html"> <img class="logo" src="logo.svg"> </a>
-
-				<ul>
-					<li> <a href="index.html">Home</a> </li>
-					<li> <a href="all.html">Products</a></li>
-					<li> <a href="">Whats new</a> </li>
-					<li> <a href="">Blog</a> </li>
-					<li> <a href="">contact</a> </li>
-				</ul>
-
-			</header>
-
+				<nav>
+					<div class="nav-wrapper">
+					  <a href="index.html" class="brand-logo"><img class="logo" src="logo.svg"></a>
+					  <a href="#" class="toggle-button">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					  </a>
+					  <ul class="nav-links">
+						<li> <a href="index.html">Home</a> </li>
+						<li> <a href="all.html">Products</a></li>
+						<li> <a href="">Whats new</a> </li>
+						<li> <a href="">Blog</a> </li>
+						<li> <a href="">contact</a> </li>
+					  </ul>
+					</div>
+				  </nav>
+				  
 			<div class="content">
 				<div class="textBox">
 					<h2 class="h22" >That's what <br> <span > I like</span> </h2>
@@ -68,6 +73,15 @@
 
 
 <script type="text/javascript">
+	const toggleButton = document.querySelector('.toggle-button');
+	const navLinks = document.querySelector('.nav-links');
+
+	toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('show');
+    });
+
+
+
 	function  imgSlider(anything){
 		document.querySelector('.woman').src = anything;
 	}
