@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-     <link rel="stylesheet" type="text/css" href="style.css">
-	<title>Landing page</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Avatars</title>
 
 	<style type="text/css">
 		
@@ -13,24 +13,22 @@
 	</style>
 </head>
 <body class="secc">
+
+	<!-- new bar  -->
+	<!-- bar ends -->
 		<section class="sec">
-				<nav>
-					<div class="nav-wrapper">
-					  <a href="index.html" class="brand-logo"><img class="logo" src="logo.svg"></a>
-					  <a href="#" class="toggle-button">
-						<span class="bar"></span>
-						<span class="bar"></span>
-						<span class="bar"></span>
-					  </a>
-					  <ul class="nav-links">
-						<li> <a href="index.html">Home</a> </li>
-						<li> <a href="all.html">Products</a></li>
-						<li> <a href="">Whats new</a> </li>
-						<li> <a href="">Blog</a> </li>
-						<li> <a href="">contact</a> </li>
-					  </ul>
-					</div>
-				  </nav>
+
+			<div class="topnav" id="myTopnav">
+				<a href="index.html" class="brand-logo active"><img class="logo" src="logo.svg"></a>
+				<a class="aa" href="all.html">Products</a>
+				<a class="aa" href="#contact">Contact</a>
+				<a class="aa" href="#about">About</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				  <i class="fa fa-bars"></i>
+				</a>
+			  </div>
+
+			
 				  
 			<div class="content">
 				<div class="textBox">
@@ -73,13 +71,14 @@
 
 
 <script type="text/javascript">
-	const toggleButton = document.querySelector('.toggle-button');
-	const navLinks = document.querySelector('.nav-links');
-
-	toggleButton.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
-
+	function myFunction() {
+	var x = document.getElementById("myTopnav");
+	if (x.className === "topnav") {
+		x.className += " responsive";
+	} else {
+		x.className = "topnav";
+	}
+	}
 
 
 	function  imgSlider(anything){
